@@ -1,0 +1,486 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ben's Mobile Detailing</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#0d0d0d;
+color:white;
+line-height:1.6;
+}
+
+header{
+background:black;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:3px solid #00aaff;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header h1{
+color:#00aaff;
+font-size:32px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#00aaff;
+}
+
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:800px;
+}
+
+.hero h2{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.button{
+display:inline-block;
+padding:15px 35px;
+background:#00aaff;
+color:white;
+text-decoration:none;
+font-weight:bold;
+border-radius:10px;
+margin:10px;
+transition:0.3s;
+}
+
+.button:hover{
+transform:scale(1.05);
+background:#008ecc;
+}
+
+section{
+padding:80px 20px;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#00aaff;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+
+.card{
+background:#1a1a1a;
+padding:30px;
+border-radius:15px;
+transition:0.3s;
+border:1px solid #2a2a2a;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#00aaff;
+}
+
+.card h3{
+margin-bottom:15px;
+color:#00aaff;
+}
+
+.pricing{
+background:#121212;
+}
+
+.package-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+max-width:1200px;
+margin:auto;
+}
+
+.package{
+background:#1b1b1b;
+padding:35px;
+border-radius:15px;
+border:2px solid #222;
+}
+
+.package h3{
+font-size:28px;
+color:#00aaff;
+margin-bottom:15px;
+}
+
+.price{
+font-size:40px;
+margin-bottom:20px;
+font-weight:bold;
+}
+
+.package ul{
+list-style:none;
+margin-bottom:25px;
+}
+
+.package ul li{
+margin:10px 0;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+}
+
+.reviews{
+background:#111;
+}
+
+.review-box{
+max-width:900px;
+margin:20px auto;
+background:#1d1d1d;
+padding:25px;
+border-radius:12px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+font-size:20px;
+margin:15px 0;
+}
+
+footer{
+background:black;
+padding:30px;
+text-align:center;
+border-top:3px solid #00aaff;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.hero h2{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:10px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Ben's Mobile Detailing</h1>
+
+<nav>
+<a href="#services">Services</a>
+<a href="#packages">Packages</a>
+<a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>Premium Mobile Car Detailing</h2>
+
+<p>
+Professional interior & exterior detailing brought directly to your driveway.
+Fast, affordable, and high-quality service.
+</p>
+
+<a class="button" href="tel:+13025189213">Call Now</a>
+
+<a class="button" href="sms:+13025189213">Text Us</a>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="services-grid">
+
+<div class="card">
+<h3>Exterior Detail</h3>
+<p>
+Hand wash, foam bath, tire shine, windows cleaned,
+wax protection, and wheel cleaning.
+</p>
+</div>
+
+<div class="card">
+<h3>Interior Detail</h3>
+<p>
+Deep vacuuming, wipe down, dashboard cleaning,
+seat shampooing, and odor removal.
+</p>
+</div>
+
+<div class="card">
+<h3>Engine Bay Cleaning</h3>
+<p>
+Safe engine bay rinse and dressing to make your
+engine look brand new.
+</p>
+</div>
+
+<div class="card">
+<h3>Seat & Carpet Shampoo</h3>
+<p>
+Deep stain extraction and shampoo treatment
+for carpets and seats.
+</p>
+</div>
+
+<div class="card">
+<h3>Wax & Paint Protection</h3>
+<p>
+Long-lasting shine and paint protection
+against dirt and weather.
+</p>
+</div>
+
+<div class="card">
+<h3>Headlight Restoration</h3>
+<p>
+Restore cloudy headlights for improved
+appearance and visibility.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="packages" class="pricing">
+
+<h2 class="section-title">Detail Packages</h2>
+
+<div class="package-grid">
+
+<div class="package">
+<h3>Quick Clean</h3>
+<div class="price">$40</div>
+
+<ul>
+<li>✔ Exterior Wash</li>
+<li>✔ Tire Shine</li>
+<li>✔ Windows Cleaned</li>
+<li>✔ Quick Vacuum</li>
+</ul>
+
+<a class="button" href="#">Book Now</a>
+</div>
+
+<div class="package">
+<h3>Interior Refresh</h3>
+<div class="price">$75</div>
+
+<ul>
+<li>✔ Deep Vacuum</li>
+<li>✔ Dashboard Wipe Down</li>
+<li>✔ Seat Cleaning</li>
+<li>✔ Door Panels Cleaned</li>
+<li>✔ Odor Removal</li>
+</ul>
+
+<a class="button" href="#">Book Now</a>
+</div>
+
+<div class="package">
+<h3>Full Detail</h3>
+<div class="price">$140</div>
+
+<ul>
+<li>✔ Full Interior Detail</li>
+<li>✔ Exterior Hand Wash</li>
+<li>✔ Tire Shine</li>
+<li>✔ Wax Protection</li>
+<li>✔ Windows & Mirrors</li>
+</ul>
+
+<a class="button" href="#">Book Now</a>
+</div>
+
+<div class="package">
+<h3>Premium Package</h3>
+<div class="price">$220</div>
+
+<ul>
+<li>✔ Full Detail Package</li>
+<li>✔ Carpet Shampoo</li>
+<li>✔ Seat Extraction</li>
+<li>✔ Clay Bar Treatment</li>
+<li>✔ Engine Bay Cleaning</li>
+<li>✔ Headlight Restoration</li>
+</ul>
+
+<a class="button" href="#">Book Now</a>
+</div>
+
+<div class="package">
+<h3>Showroom Package</h3>
+<div class="price">$350</div>
+
+<ul>
+<li>✔ Everything Included</li>
+<li>✔ Paint Sealant</li>
+<li>✔ Deep Interior Restoration</li>
+<li>✔ Premium Wax</li>
+<li>✔ Full Odor Elimination</li>
+<li>✔ 5+ Hour Deep Detail</li>
+</ul>
+
+<a class="button" href="#">Book Now</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="section-title">Recent Work</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<section id="reviews" class="reviews">
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="review-box">
+<p>
+★★★★★ "My car looked brand new again. Super professional and worth every dollar."
+</p>
+<h4>- Mike T.</h4>
+</div>
+
+<div class="review-box">
+<p>
+★★★★★ "Fast service, great communication, and amazing results."
+</p>
+<h4>- Sarah L.</h4>
+</div>
+
+<div class="review-box">
+<p>
+★★★★★ "The interior detail completely removed stains I thought would never come out."
+</p>
+<h4>- Jason R.</h4>
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Book Your Detail Today</h2>
+
+<p>📞 +1 (302) 518-9213</p>
+<p>📧 Ben.Grieder@gmail.com</p>
+
+<a class="button" href="tel:+13025189213">Call Now</a>
+<a class="button" href="sms:+13025189213">Text Us</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 Ben's Mobile Detailing</p>
+<p>Professional Mobile Detailing Services</p>
+
+</footer>
+
+</body>
+</html>
+```
